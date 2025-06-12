@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Climate Solutions</title>
+  <link href="/css/main.css" rel="stylesheet">
+</head>
+<body class="bg-base-100">
+  <!-- Navbar -->
+  <nav class="navbar bg-base-200">
+    <div class="flex-1">
+      <a href="/" class="btn btn-ghost text-2xl font-bold">Climate Solutions</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Sector</summary>
+            <ul class="p-2 bg-base-100">
+              <li><a href="/solutions/projects?sector=Energy">Energy</a></li>
+              <li><a href="/solutions/projects?sector=Transport">Transport</a></li>
+              <li><a href="/solutions/projects?sector=Waste">Waste</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <!-- Hero -->
+    <div class="hero bg-base-200 rounded-lg mb-8">
+      <div class="hero-content flex-col lg:flex-row">
+        <div>
+          <h1 class="text-5xl font-bold">Explore Climate Solutions Projects</h1>
+          <p class="py-6">Discover innovative projects making a difference in the fight against climate change.</p>
+          <a href="/solutions/projects" class="btn btn-primary">View Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="card bg-base-100 shadow-xl">
+        <figure><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Solar Farm"></figure>
+        <div class="card-body">
+          <h2 class="card-title">Solar Farm Expansion</h2>
+          <p>Expanding solar energy capacity to power thousands of homes sustainably.</p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/1" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card bg-base-100 shadow-xl">
+        <figure><img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Electric Buses"></figure>
+        <div class="card-body">
+          <h2 class="card-title">Electric Bus Fleet</h2>
+          <p>Introducing electric buses to reduce urban emissions and improve air quality.</p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/2" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card bg-base-100 shadow-xl">
+        <figure><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Recycling Initiative"></figure>
+        <div class="card-body">
+          <h2 class="card-title">Community Recycling Initiative</h2>
+          <p>Boosting recycling rates through education and improved infrastructure.</p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/3" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

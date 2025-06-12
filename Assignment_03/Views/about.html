@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Climate Solutions</title>
+  <link href="/css/main.css" rel="stylesheet">
+</head>
+<body class="bg-base-100">
+  <!-- Navbar -->
+  <nav class="navbar bg-base-200">
+    <div class="flex-1">
+      <a href="/" class="btn btn-ghost text-2xl font-bold">Climate Solutions</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="active" href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Sector</summary>
+            <ul class="p-2 bg-base-100">
+              <li><a href="/solutions/projects?sector=Energy">Energy</a></li>
+              <li><a href="/solutions/projects?sector=Transport">Transport</a></li>
+              <li><a href="/solutions/projects?sector=Waste">Waste</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <!-- Hero -->
+    <div class="hero bg-base-200 rounded-lg mb-8">
+      <div class="hero-content flex-col lg:flex-row">
+        <div>
+          <h1 class="text-5xl font-bold">About</h1>
+          <p class="py-6">All about me and this project!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <!-- Left: Image -->
+      <div class="flex justify-center">
+        <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80" alt="About Me" class="rounded-lg shadow-lg w-80">
+      </div>
+      <!-- Right: Blurb -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">Hi, I'm João Marcos!</h2>
+        <p>
+          I'm a passionate web developer and student, currently taking courses in web technologies and software engineering. I enjoy coding, learning new frameworks, and working on projects that make a positive impact. In my free time, I love hiking, photography, and exploring new places.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

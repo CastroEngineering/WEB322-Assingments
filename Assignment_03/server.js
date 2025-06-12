@@ -20,26 +20,37 @@ const HTTP_PORT = process.env.PORT || 8080;
 projectData.Initialize().then(() => {
 
 app.get("/", (req, res) => {
-  res.send("Assignment 2: Joao Marcos - 173962234");
+  res.sendFile(Path2D.join(__dirname, "Views/home.html"));
+});
+
+pp.get("/about", (req, res) => {
+  res.sendFile(path.join(__dirname, "Views/about.html"));
 });
 
 app.get("/solutions/projects", (req, res) => {
-  projectData.getAllProjects()
+  if (req.query.sector) {
+    projectData.getProjectsBySector("ind")
     .then(projects => res.json(projects))
-    .catch(err => res.send(err));
+    .catch(err => res.status(404).send(err));
+  } else {
+    projectData.getAllProjects()
+    .then(projects => res.json(projects))
+    .catch(err => res.status(404).send(err));
+  }
+    
 });
 
-app.get("/solutions/projects/id-demo", (req, res) => {
-  projectData.getProjectById(1)
+app.get("/solutions/projects/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  projectData.getProjectById(id)
     .then(project => res.json(project))
     .catch(err => res.send(err));
 });
 
-app.get("/solutions/projects/sector-demo", (req, res) => {
-  projectData.getProjectsBySector("ind")
-    .then(projects => res.json(projects))
-    .catch(err => res.send(err));
-})
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "Views/404.html"));
+});
+
 app.listen(HTTP_PORT, () => console.log(`server listening on: ${HTTP_PORT}`));
 
 });
