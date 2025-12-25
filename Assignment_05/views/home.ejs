@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- hero with background image -->
+    <div class="hero min-h-screen"
+        style="background-image: url(https://images.unsplash.com/photo-1592701601033-c17588001fb8?q=80&amp;w=1200&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-lg">
+                <% for (let i = 0; i < locations.length; i++) { %>
+                    <h1 class="mb-5 text-5xl font-bold"><%= locations[i].name %></h1>
+                    <p class="mb-5"><%= locations[i].comments %></p>
+                <% } %>
+            </div>
+        </div>
+    </div> <!-- end hero -->
+
+
+    <div class="container mx-auto my-6 gap-x-8">
+        <!-- add button  -->
+        <div class="flex justify-end mb-4">
+            <a href="/memories/add" class="btn btn-active btn-primary">Add Location</a>
+        </div>
+
+        <!-- table -->
+        <div>
+            <table class="table">
+                <!-- column heading row -->
+                <thead>
+                    <tr class="bg-neutral-content">
+                        <th></th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Comments</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- rows -->
+                    <% if (locations) { %>
+                    <% for (let i = 0; i < locations.length; i++) { %>
+                    <tr>
+                        <td>
+                            <img src="https://i.ytimg.com/vi/BFblOhkIgak/maxresdefault.jpg" class="w-96">
+                        </td>
+                        <td>
+                            <span class="font-bold"><%= locations[i].name %></span>
+                            <br>
+                            <span class="badge badge-primary badge-sm badge-outline">Food</span>
+                        </td>
+                        <td><%= locations[i].address %></td>
+                        <td><%= locations[i].comments %></td>
+                        <th>
+                            <a href="./page1.html" class="btn btn-default btn-xs">delete</a>
+                        </th>
+                    </tr>
+                    <% } %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="5" class="text-center">No locations</td>
+                        </tr>
+                    <% } %>
+                    
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

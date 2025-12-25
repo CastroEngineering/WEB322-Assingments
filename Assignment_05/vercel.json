@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "PGHOST": "ep-billowing-sky-a822g3rw-pooler.eastus2.azure.neon.tech",
+    "PGDATABASE": "Assignment 05",
+    "PGUSER": "neondb_owner",
+    "PGPASSWORD": "npg_D1iJQedmwI0f"
+  }
+}
